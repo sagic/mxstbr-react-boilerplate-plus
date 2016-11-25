@@ -24,8 +24,8 @@ module.exports = require('./webpack.base.babel')({
       async: true,
     }),
 
-    // Merge all duplicate modules
-    new webpack.optimize.DedupePlugin(),
+    // // Merge all duplicate modules
+    // new webpack.optimize.DedupePlugin(),
 
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
