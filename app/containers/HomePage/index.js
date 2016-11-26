@@ -23,6 +23,9 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             <FormattedMessage {...messages.header} />
           </div>
         </h1>
+        <p>
+          <a className="btn btn-primary">Primary</a>
+        </p>
         <p>{__VERSION__}</p>
         <p>{process.env.NODE_ENV}</p>
       </div>

@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = require('./webpack.base.babel')({
   // In production, we skip all hot-reloading stuff
   entry: [
+    'bootstrap-loader',
     path.join(process.cwd(), 'app/app.js'),
   ],
 
@@ -29,6 +30,7 @@ module.exports = require('./webpack.base.babel')({
       },
     },
     'sass-loader',
+    // 'sass-resources-loader',
     'postcss-loader',
   ],
 

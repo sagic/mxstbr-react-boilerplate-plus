@@ -52,6 +52,22 @@ module.exports = (options) => ({
     }],
   },
   plugins: options.plugins.concat([
+    // new webpack.LoaderOptionsPlugin({
+    //   options: {
+    //     sassLoader: {
+    //       includePaths: [
+    //         './app/styles',
+    //         './node_modules/bootstrap-sass',
+    //       ],
+    //     },
+    //     sassResources: [
+    //       './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss',
+    //       './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss',
+    //       // 'app/styles/bootstrap/resources.scss',
+    //     ],
+    //     context: path.resolve(__dirname, '../../'),
+    //   },
+    // }),
     new webpack.ProvidePlugin({
       // make fetch available
       fetch: 'exports?self.fetch!whatwg-fetch',
