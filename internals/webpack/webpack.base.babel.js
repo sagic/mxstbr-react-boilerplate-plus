@@ -4,6 +4,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const packageJson = require('./../../package.json');
 
 module.exports = (options) => ({
   entry: options.entry,
@@ -63,6 +64,7 @@ module.exports = (options) => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
+      __VERSION__: JSON.stringify(packageJson.version),
     }),
     new webpack.NamedModulesPlugin(),
   ]),

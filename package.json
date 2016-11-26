@@ -103,6 +103,9 @@
         "jsx": true
       }
     },
+    "globals": {
+        "__VERSION__": true
+    },
     "rules": {
       "arrow-parens": [
         "error",
