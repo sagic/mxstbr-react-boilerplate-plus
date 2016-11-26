@@ -16,6 +16,22 @@ module.exports = require('./webpack.base.babel')({
     chunkFilename: '[name].[chunkhash].chunk.js',
   },
 
+  scssLoaders: [
+    'style-loader',
+    {
+      loader: 'css-loader',
+      options: {
+        sourceMap: true,
+        outputStyle: 'expanded',
+        importLoaders: 1,
+        modules: true,
+        localIdentName: '[local]__[path][name]__[hash:base64:5]',
+      },
+    },
+    'sass-loader',
+    'postcss-loader',
+  ],
+
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

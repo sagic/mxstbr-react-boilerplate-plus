@@ -44,6 +44,22 @@ module.exports = require('./webpack.base.babel')({
 
   // Emit a source map for easier debugging
   devtool: 'cheap-module-eval-source-map',
+
+  scssLoaders: [
+    'style-loader',
+    {
+      loader: 'css-loader',
+      options: {
+        sourceMap: true,
+        outputStyle: 'expanded',
+        importLoaders: 1,
+        modules: true,
+        localIdentName: '[local]__[path][name]__[hash:base64:5]',
+      },
+    },
+    'sass-loader',
+    'postcss-loader',
+  ],
 });
 
 /**

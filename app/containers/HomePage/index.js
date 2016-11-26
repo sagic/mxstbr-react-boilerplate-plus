@@ -12,12 +12,15 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import styles from './styles.scss';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <h1>
-        <FormattedMessage {...messages.header} />
+        <div className={`${styles.wrapperTest} wtf`}>
+          <FormattedMessage {...messages.header} />
+        </div>
       </h1>
     );
   }
